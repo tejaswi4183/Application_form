@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>
+            Application Form
+        </title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <h1>STUDY APPLICATION FORM</h1>
+        <div id="container">
+            <form >
+                <div id="heading">Application</div>
+                <div id="subhead">Please fill out the application form carefully</div>
+               
+                <div class="name" display:inline>
+                    <div>FullName
+                        <span style="color:red">
+                            *
+                        </span>
+                        <input type="text" id="fullname" style="margin-left:45px;" class="values" onblur="validateFullName(this.id)" required>
+                    </div>
+                </div>
+                <div  class="name" display:inline>
+                    <div>FatherName
+                        <span style="color:red">
+                            *
+                        </span>
+                        <input type="text" id="fathername"  style="margin-left:23px;" class="values" onblur="validateFullName(this.id)" required >
+                    </div>
+                </div>
+                <div  class="name" display:inline>
+                    <div>MotherName
+                        <span style="color:red" >
+                            *
+                        </span>
+                        <input type="text" id="mothername" style="margin-left:18px;" class="values" onblur="validateFullName(this.id)" required>
+                    </div>
+                </div>
+                <div  class="name" display:inline>
+                    <div>Date of Birth
+                        <span style="color:red">
+                            *
+                        </span>
+                        <input type="date" id="dob"  style="margin-left:20px;" class="values" required>
+                    </div>
+                </div>
+                <div  class="name" display:inline>
+                    <div>Gender
+                        <span style="color:red">
+                            *
+                        </span>
+                    
+                    <select id="gender" name="Gender" style="margin-left:65px;width:310px;" class="values">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                    </select>
+                  
+                </div>
+                </div>
+                <div   class="name" display:inline>
+                    <div>Degree
+                        <span style="color:red">
+                            *
+                        </span>
+                        <input type="text" id="degree" style="margin-left:65px;" required class="values" onblur="validateFullName(this.id)" >
+                    </div>
+                </div>
+                <div  class="name" display:inline>
+                    <div>College Name
+                        <span style="color:red">
+                            *
+                        </span>
+                        <input type="text"  class="values" id="college" onblur="validateFullName(this.id)" required>
+                    </div>
+                </div>
+                <div  class="name" display:inline>
+                    <div>Email Address
+                        <span style="color:red">
+                            *
+                        </span>
+                        <input type="text" id="email" class="values" onblur="validateEmail(this.id)" required >
+                    </div>
+                </div>
+                <div  class="name" display:inline>
+                    <div>Mobile Number
+                        <span style="color:red">
+                            *
+                        </span>
+                        <input type="text" id="mobile" style="margin-left:2px;" class="values" onblur="validateNumber(this.id)" required>
+                    </div>
+                </div>
+                <div  class="name" >
+                    <div display:inline>Address
+                        <span style="color:red">
+                            *
+                        </span>
+                        <input type="text" class="values" style="width:140px;margin-left:63px;" id="street"  onblur="validateFullName(this.id)"  placeholder="Street" required  >
+                        <input type="text" class="values" style="width:140px;margin-left:10px;"  id="city" placeholder="City" required>
+                    </div>
+                    <div display:inline style="margin-left:135px;padding-top:15px;">
+                    <input type="text" class="values" style="width:140px;" placeholder="District" onblur="validateFullName(this.id)"  id="district" required>
+                    <input type="text" class="values" style="width:140px;" placeholder="Zipcode"   id="zipcode" required>
+                    </div>
+                    <div display:inline style="margin-left:135px;padding-top:15px;">
+                        <input type="text" class="values" style="width:140px;" placeholder="State" onblur="validateFullName(this.id)" id="state" required >
+                        <input type="text" class="values" style="width:140px;" placeholder="Country"  onblur="validateFullName(this.id)" id="country" required>
+                    </div>
+                </div>
+                
+                <input type="button"  id="btn" value="Submit" name="button" onclick="Details()">
+                <input type="submit"  id="btn" value="Reset" name="button"   style="float:left"  >
+            </form>
+                  
+        </div>
+        <script src="main.js">
+       
+        </script>
+       
+    </body>
+</html>
