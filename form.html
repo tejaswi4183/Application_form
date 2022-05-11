@@ -9,8 +9,9 @@
     </head>
     <body>
         <h1>STUDY APPLICATION FORM</h1>
-        <div id="container">
-            <form >
+        <form class="my-fomrs" name="section" action="" method="" onsubmit="return validateInputs()">
+        <div id="container" onclick="submit">
+            
                 <div id="heading">Application</div>
                 <div id="subhead">Please fill out the application form carefully</div>
                
@@ -19,7 +20,7 @@
                         <span style="color:red">
                             *
                         </span>
-                        <input type="text" id="fullname" style="margin-left:45px;" class="values" onblur="validateFullName(this.id)" required>
+                        <input type="text" id="fullname" style="margin-left:45px;" class="values" onblur="validateFullName(this.id)" >
                     </div>
                 </div>
                 <div  class="name" display:inline>
@@ -27,7 +28,7 @@
                         <span style="color:red">
                             *
                         </span>
-                        <input type="text" id="fathername"  style="margin-left:23px;" class="values" onblur="validateFullName(this.id)" required >
+                        <input type="text" id="fathername"  style="margin-left:23px;" class="values" onblur="validateFatherName(this.id)"  >
                     </div>
                 </div>
                 <div  class="name" display:inline>
@@ -35,7 +36,7 @@
                         <span style="color:red" >
                             *
                         </span>
-                        <input type="text" id="mothername" style="margin-left:18px;" class="values" onblur="validateFullName(this.id)" required>
+                        <input type="text" id="mothername" style="margin-left:18px;" class="values" onblur="validateMotherName(this.id)" >
                     </div>
                 </div>
                 <div  class="name" display:inline>
@@ -43,7 +44,7 @@
                         <span style="color:red">
                             *
                         </span>
-                        <input type="date" id="dob"  style="margin-left:20px;" class="values" required>
+                        <input type="date" id="dob"  style="margin-left:20px;" class="values" >
                     </div>
                 </div>
                 <div  class="name" display:inline>
@@ -65,7 +66,7 @@
                         <span style="color:red">
                             *
                         </span>
-                        <input type="text" id="degree" style="margin-left:65px;" required class="values" onblur="validateFullName(this.id)" >
+                        <input type="text" id="degree" style="margin-left:65px;"  class="values" onblur="validateDegree(this.id)" >
                     </div>
                 </div>
                 <div  class="name" display:inline>
@@ -73,7 +74,7 @@
                         <span style="color:red">
                             *
                         </span>
-                        <input type="text"  class="values" id="college" onblur="validateFullName(this.id)" required>
+                        <input type="text"  class="values" id="college" onblur="validateCollegeName(this.id)" >
                     </div>
                 </div>
                 <div  class="name" display:inline>
@@ -81,7 +82,7 @@
                         <span style="color:red">
                             *
                         </span>
-                        <input type="text" id="email" class="values" onblur="validateEmail(this.id)" required >
+                        <input type="text" id="email" class="values" onblur="validateEmail(this.id)" >
                     </div>
                 </div>
                 <div  class="name" display:inline>
@@ -89,7 +90,7 @@
                         <span style="color:red">
                             *
                         </span>
-                        <input type="text" id="mobile" style="margin-left:2px;" class="values" onblur="validateNumber(this.id)" required>
+                        <input type="text" id="mobile" style="margin-left:2px;" class="values" onblur="validateNumber(this.id)" >
                     </div>
                 </div>
                 <div  class="name" >
@@ -97,24 +98,25 @@
                         <span style="color:red">
                             *
                         </span>
-                        <input type="text" class="values" style="width:140px;margin-left:63px;" id="street"  onblur="validateFullName(this.id)"  placeholder="Street" required  >
-                        <input type="text" class="values" style="width:140px;margin-left:10px;"  id="city" placeholder="City" required>
+                        <input type="text" class="values" style="width:140px;margin-left:63px;" id="street"  onblur="validateAdress(this.id)"  placeholder="Street"  >
+                        <input type="text" class="values" style="width:140px;margin-left:10px;"  id="city" placeholder="City" onblur="validateAdress(this.id)" >
                     </div>
                     <div display:inline style="margin-left:135px;padding-top:15px;">
-                    <input type="text" class="values" style="width:140px;" placeholder="District" onblur="validateFullName(this.id)"  id="district" required>
-                    <input type="text" class="values" style="width:140px;" placeholder="Zipcode"   id="zipcode" required>
+                    <input type="text" class="values" style="width:140px;" placeholder="District" onblur="validateAdress(this.id)"  id="district">
+                    <input type="text" class="values" style="width:140px;" placeholder="Zipcode"    id="zipcode">
                     </div>
                     <div display:inline style="margin-left:135px;padding-top:15px;">
-                        <input type="text" class="values" style="width:140px;" placeholder="State" onblur="validateFullName(this.id)" id="state" required >
-                        <input type="text" class="values" style="width:140px;" placeholder="Country"  onblur="validateFullName(this.id)" id="country" required>
+                        <input type="text" class="values" style="width:140px;" placeholder="State" onblur="validateAdress(this.id)" id="state" >
+                        <input type="text" class="values" style="width:140px;" placeholder="Country"  onblur="validateAdress(this.id)" id="country" >
                     </div>
                 </div>
                 
-                <input type="button"  id="btn" value="Submit" name="button" onclick="Details()">
-                <input type="submit"  id="btn" value="Reset" name="button"   style="float:left"  >
-            </form>
+                <button type="submit" id="submit"  class="btn" >SUBMIT</button>
+                <button type="reset" class="btn" style="float:left" >RESET</button>
+            
                   
         </div>
+    </form>
         <script src="main.js">
        
         </script>

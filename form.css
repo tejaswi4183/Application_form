@@ -55,7 +55,7 @@ h1{
     background-color: white;
     width:300px;
 }
-#btn{
+.btn{
     width:180px;
     padding:10px;
     float: right;

@@ -1,81 +1,138 @@
-const Fullname=document.getElementById("fullname").value;
-let Fathername=document.getElementById("fathername").value;
-let Mothername=document.getElementById("mothername").value;;
-let Dob=document.getElementById("dob").value;
-let Gender=document.getElementById("gender").value;
-let Degree=document.getElementById("degree").value;
-let College=document.getElementById("college").value;
-let Email=document.getElementById("email").value;
-let Mobile=document.getElementById("mobile").value;
-let Street=document.getElementById("street").value;
-let City=document.getElementById("city").value;
-let District=document.getElementById("district").value;
-let Zipcode=document.getElementById("zipcode").value;
-let State=document.getElementById("state").value;
-let Country=document.getElementById("city").value;
+function validateInputs(){
+let Fullname=document.getElementById("fullname");
+let Fathername=document.getElementById("fathername");
+let Mothername=document.getElementById("mothername");
+let Dob=document.getElementById("dob");
+let Gender=document.getElementById("gender");
+let Degree=document.getElementById("degree");
+let College=document.getElementById("college");
+let Email=document.getElementById("email");
+let Mobile=document.getElementById("mobile");
+let Street=document.getElementById("street");
+let City=document.getElementById("city");
+let District=document.getElementById("district");
+let Zipcode=document.getElementById("zipcode");
+let State=document.getElementById("state");
+let Country=document.getElementById("city");
+
+console.log("Fullname ="+Fullname.value)
+console.log("FatherName ="+Fathername.value)
+console.log("Mother Name ="+Mothername.value)
+console.log("Date of Birth ="+Dob.value)
+console.log("Gender ="+Gender.value)
+console.log("Degree ="+Degree.value)
+console.log("College ="+College.value)
+console.log("Email ="+Email.value)
+console.log("Mobile ="+Mobile.value)
+console.log("Street ="+Street.value)
+console.log("City ="+City.value)
+console.log("District ="+District.value)
+console.log("Zipcode ="+Zipcode.value)
+console.log("State ="+State.value)
+console.log("Country ="+Country.value)
 let Btn=document.getElementById("btn");
-if(Fullname.length <=0){
-    alert("Full name is requrd..");
-  
+if(Fullname.value.length <=0){
+    alert(" Full name is required..");
+    Fullname.focus();
+    return false;
+
    
-};
-if(Fathername.length <=0){
+}
+if(Fathername.value.length <=0){
     alert("Father name is requrd..");
+    Fathername.focus();
+    return false;
+
+
    
-};
-if(Mothername.length <=0){
+}
+if(Mothername.value.length <=0){
     alert("Mother name is requrd..");
+    Mothername.focus();
+    return false;
+
    
-};
-if(Dob.length <=0){
+}
+if(Dob.value.length <=0){
     alert("Date of Birth is requrd..");
-   
-};
-if(Degree.length <=0){
+    Dob.focus();
+    return false;
+
+}
+if(Degree.value.length <=0){
     alert("Degree is requrd..");
+    Degree.focus();
+    return false;
+
    
-};
-if(College.length <=0){
+}
+if(College.value.length <=0){
     alert("College name is requrd..");
+    College.focus();
+    return false;
+
    
-};
-if(Email.length <=0){
+}
+if(Email.value.length <=0){
     alert("Email is requrd..");
+    Email.focus();
+    return false;
+
    
-};
-if(Mobile.length <=0){
+}
+if(Mobile.value.length <=0){
     alert("Mobile Number is requrd..");
-   
-};
-if(Street.length <=0){
+    Mobile.focus();
+    return false;
+
+}
+if(Street.value.length <=0){
     alert("Street name is requrd..");
+    Street.focus();
+    return false;
+
    
-};
-if(City.length <=0){
+}
+if(City.value.length <=0){
     alert("City is requrd..");
+    City.focus();
+    return false;
+
    
-};
-if(District.length <=0){
+}
+if(District.value.length <=0){
     alert("District name is requrd..");
+    District.focus();
+    return false;
+
    
-};
-if(State.length <=0){
+}
+if(State.value.length <=0){
     alert("State name is requrd..");
-   
-};
-if(Country.length <=0){
+    State.focus();
+    return false;
+
+}
+if(Country.value.length <=0){
     alert("Country name is requrd..");
+    Country.focus();
+    return false;
+
    
-};
-if(Zipcode.length <=0){
+}
+if(Zipcode.value.length <=0){
     alert("Zip Code is requrd..");
-   
-};
+    Zipcode.focus();
+    return false;
+
+}return false;
+}
 function validateNumber(id){
     const element=document.getElementById(id);
     const re=/^[0-9]{10}$/;
     if(!re.test(element.value)){
-        alert("Enter 10 digit mobile no. ")
+        setTimeout(function() {alert("Number should be a number:..");},4000);
+        
         element.style.border="2px solid #ff0012";
         return false;
     };
@@ -85,7 +142,8 @@ function validateEmail(id){
     const element=document.getElementById(id);
     const re=/^[a-zA-z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]{2,4}$/;
     if(!re.test(element.value)){
-        alert("Enter vaild email..")
+        setTimeout(function() {alert("Enter Valid Email..");},4000);
+     
         element.style.border="2px solid #ff0012";
         return false;
     };
@@ -95,28 +153,63 @@ function validateFullName(id){
     const element=document.getElementById(id);
     const re=/^[a-zA-z ]+$/;
     if(!re.test(element.value)){
-        alert("Text must be string only..")
+        setTimeout(function() {alert("FullName must be a String..");},4000);
         element.style.border="2px solid #ff0012";
         return false;
     };
     element.style.border="2px solid #5dfbdf";
 };
-function Details(){
-console.log("Fullname ="+Fullname)
-console.log("FatherName ="+Fathername)
-console.log("Mother Name ="+Mothername)
-console.log("Date of Birth ="+Dob)
-console.log("Gender ="+Gender)
-console.log("Degree ="+Degree)
-console.log("College ="+College)
-console.log("Email ="+Email)
-console.log("Mobile ="+Mobile)
-console.log("Street ="+Street)
-console.log("City ="+City)
-console.log("District ="+District)
-console.log("Zipcode ="+Zipcode)
-console.log("State ="+State)
-console.log("Country ="+Country)
+function validateFatherName(id){
+    const element=document.getElementById(id);
+    const re=/^[a-zA-z ]+$/;
+    if(!re.test(element.value)){
+        setTimeout(function() {alert("Father name must be string only..");},4000);
+        
+        element.style.border="2px solid #ff0012";
+        return false;
+    };
+    element.style.border="2px solid #5dfbdf";
+};
+function validateMotherName(id){
+    const element=document.getElementById(id);
+    const re=/^[a-zA-z ]+$/;
+    if(!re.test(element.value)){
+        setTimeout(function() {alert("Mother name must be string only..");},4000);
+        
+        
+        element.style.border="2px solid #ff0012";
+        return false;
+    };
+    element.style.border="2px solid #5dfbdf";
+};
+function validateCollegeName(id){
+    const element=document.getElementById(id);
+    const re=/^[a-zA-z ]+$/;
+    if(!re.test(element.value)){
+        setTimeout(function() {alert("college_name must be string only..");},4000);
+        return false;
+    };
+};
+function validateDegree(id){
+    const element=document.getElementById(id);
+    const re=/^[a-zA-z ]+$/;
+    if(!re.test(element.value)){
+        setTimeout(function() {alert("Enter valid degree..");},4000);
+      
+        element.style.border="2px solid #ff0012";
+        return false;
+    };
+    element.style.border="2px solid #5dfbdf";
+};
 
+function validateAdress(id){
+    const element=document.getElementById(id);
+    const re=/^[a-zA-z ]+$/;
+    if(!re.test(element.value)){
+        setTimeout(function() {alert("Adress must be string only..");},4000);
+        element.style.border="2px solid #ff0012";
+        return false;
+    };
+    element.style.border="2px solid #5dfbdf";
+};
 
-}
